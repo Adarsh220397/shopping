@@ -3,7 +3,7 @@ class UserModel {
   String categoryName;
   String createdBy;
   String slug;
-  String description;
+  String image;
   String createdAt;
   String role;
   num price;
@@ -13,7 +13,7 @@ class UserModel {
     required this.categoryName,
     required this.createdBy,
     required this.slug,
-    required this.description,
+    required this.image,
     required this.createdAt,
     required this.role,
     required this.price,
@@ -31,8 +31,7 @@ class UserModel {
         slug: json['category']['slug'] == null
             ? ''
             : json['category']['slug'] as String,
-        description:
-            json['description'] == null ? '' : json['description'] as String,
+        image: json['image'] == null ? '' : json['image'] as String,
         createdAt: json['createdAt'] == null ? '' : json['createdAt'] as String,
         role: json['createdBy']['role'] == null
             ? ''
@@ -46,7 +45,7 @@ class UserModel {
     data['category']['name'] = categoryName;
     data['createdBy']['name'] = createdBy;
     data['category']['slug'] = slug;
-    data['description'] = description;
+    data['image'] = image;
     data['createdAt'] = createdAt;
     data['createdBy']['role'] = role;
     data['price'] = price;

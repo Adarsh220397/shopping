@@ -29,18 +29,6 @@ class UserService {
         }
         categoryList.add(UserModel.fromJson(response));
       }
-
-      for (UserModel user in categoryList) {
-        print(user.categoryName);
-        print(user.createdBy);
-        print(user.createdAt);
-        print(user.description);
-        print(user.price);
-        print(user.role);
-        print(user.slug);
-        print(user.title);
-        print('--------------------');
-      }
     } else {
       Exception('No document found');
     }

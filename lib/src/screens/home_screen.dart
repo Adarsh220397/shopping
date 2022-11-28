@@ -32,9 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
     fetchData();
   }
 
-  //String categoryName = '';
   Future<void> fetchData() async {
-    // suggestionList.clear();
     isLoading = true;
     list = await UserService.instance.getUserDetails();
 
@@ -64,13 +62,16 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget loginDetailsScreenBodyUI() {
-    return Stack(
-      children: <Widget>[
-        Positioned(
-            top: MediaQuery.of(context).size.height / 10,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: optionsUI()),
+    return Column(
+      children: [
+        Text(
+          'Options',
+          style: themeData.textTheme.headline6!.copyWith(color: Colors.white),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        optionsUI(),
       ],
     );
   }

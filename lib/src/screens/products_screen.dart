@@ -105,21 +105,25 @@ class _ProductsScreenState extends State<ProductsScreen> {
         SizedBox(
           height: 3,
         ),
-        SizedBox(
-          child: Text(
-            choice.title,
-            style: themeData.textTheme.subtitle1!.copyWith(color: Colors.white),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 4,
-            textAlign: TextAlign.center,
+        Flexible(
+          child: SizedBox(
+            height: 50,
+            child: Text(
+              choice.title,
+              style:
+                  themeData.textTheme.subtitle2!.copyWith(color: Colors.grey),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 4,
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
         SizedBox(
-          height: 3,
+          height: 10,
         ),
         Text(
           'Price (Rs) : ${choice.price.toString()}',
-          style: themeData.textTheme.subtitle2!.copyWith(color: Colors.white),
+          style: themeData.textTheme.subtitle1!.copyWith(color: Colors.white),
           textAlign: TextAlign.center,
         ),
       ]),

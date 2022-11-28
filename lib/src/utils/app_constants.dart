@@ -1,17 +1,10 @@
+import 'package:flutter/material.dart';
+
 abstract class AppConstants {
-  static const String appName = "FirstPoster";
+  static const String appName = "Fashion App";
   static const String deviceTypeAndroid = "android";
   static const String deviceTypeIOS = "ios";
   static const String deviceTypeWeb = "web";
 
-  // static UserModel userModel = UserModel(
-  //   uuid: "",
-  //   generatedQRCode: '',
-  //   qrCodePath: '',
-  //   ipAddress: '',
-  //   location: '',
-  //   dialCode: "",
-  //   mobileNumber: "",
-  //   currentDate: DateTime.now(),
-  // );
+  static const Color scaffoldBackgroundColor = Color.fromARGB(255, 1, 16, 39);
 }
