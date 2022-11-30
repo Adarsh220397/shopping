@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:sales_app/src/screens/home_screen.dart';
@@ -42,7 +41,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
       onWillPop: () async {
         return await Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
+            MaterialPageRoute(builder: (context) => const HomeScreen()),
             (Route<dynamic> route) => false);
       },
       child: Scaffold(
@@ -102,7 +101,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                       'assets/imgs/mens.png',
                     ),
                   ),
-        SizedBox(
+        const SizedBox(
           height: 3,
         ),
         Flexible(
@@ -118,7 +117,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
